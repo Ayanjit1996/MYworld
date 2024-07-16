@@ -1,2 +1,0 @@
-# Myworld
-NA
