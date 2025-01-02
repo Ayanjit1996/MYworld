@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ayontika</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #3a1c71, #d76d77, #ffaf7b);
+            font-family: 'Pacifico', cursive;
+            overflow: hidden;
+        }
+
+        .birthday-container {
+            text-align: center;
+            color: #ffffff;
+            animation: fadeIn 3s ease-in-out;
+            padding: 20px;
+            max-width: 90%;
+        }
+
+        .heart {
+            font-size: 5rem;
+            color: #ff4f5e;
+            animation: beat 1s infinite;
+        }
+
+        .title {
+            font-size: 3rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            line-height: 2;
+            color: #fffbf5;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .heart {
+                font-size: 3rem;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .message {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="birthday-container">
+        <div class="heart">💖</div>
+        <h1 class="title">Happy Birthday, Ayontika!</h1>
+        <p class="message">
+            Today is a celebration of you—the amazing, kind, and beautiful person who lights up my life. 
+            I am so lucky to have you as my girlfriend, and every day with you feels like a gift.
+            <br><br>
+            I hope this birthday brings you as much happiness as you bring to me. 
+            Let this day remind you of how loved and cherished you are. 
+            Here's to many more birthdays together, filled with laughter, joy, and unforgettable moments. 
+            <br><br>
+            Happy Birthday, my love! ❤️🎉 You make my world brighter just by being in it.
+        </p>
+    </div>
+</body>
+</html>
