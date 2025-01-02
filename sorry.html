@@ -3,62 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Page</title>
+    <title>Happy Birthday Ayontika</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+            font-family: 'Comic Sans MS', cursive;
+            overflow: hidden;
         }
-        .container {
+
+        .birthday-container {
             text-align: center;
-            border: 5px solid #333;
-            border-radius: 15px;
-            padding: 50px;
-            background-color: red;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
+            color: #fff;
+            animation: fadeIn 3s ease-in-out;
+            padding: 20px;
         }
-        .border-decor {
+
+        .heart {
+            font-size: 3rem;
+            color: #ff4f5e;
+            animation: beat 1s infinite;
+        }
+
+        .title {
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1rem;
+            font-style: italic;
+            max-width: 100%;
+            line-height: 1.6;
+            color: #ffe4e6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .balloons {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            animation: rise 10s infinite ease-in-out;
         }
-        .border-decor::before, .border-decor::after {
+
+        .balloon {
+            width: 40px;
+            height: 60px;
+            background: #ffd700;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .balloon:nth-child(2) {
+            background: #00bcd4;
+        }
+
+        .balloon:nth-child(3) {
+            background: #ff4f5e;
+        }
+
+        .balloon::after {
             content: '';
             position: absolute;
-            border: 10px solid transparent;
-            z-index: -1;
+            width: 2px;
+            height: 80px;
+            background: #fff;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
         }
-        .border-decor::before {
-            top: 0;
-            left: 0;
-            border-top-color: #ff6f61;
-            border-left-color: #ff6f61;
+
+        @keyframes rise {
+            0% {
+                top: 100%;
+            }
+            50% {
+                top: 20%;
+            }
+            100% {
+                top: 100%;
+            }
         }
-        .border-decor::after {
-            bottom: 0;
-            right: 0;
-            border-bottom-color: #ff6f61;
-            border-right-color: #ff6f61;
-        }
-        .container h1, .container p {
-            color: white;
-            margin: 0;
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .heart {
+                font-size: 2.5rem;
+            }
+
+            .title {
+                font-size: 1.8rem;
+            }
+
+            .message {
+                font-size: 0.9rem;
+            }
+
+            .balloon {
+                width: 30px;
+                height: 50px;
+            }
+
+            .balloon::after {
+                height: 60px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Ayontika</h1>
-        <p>I LOVE YOU BABY</p>
+    <div class="birthday-container">
+        <div class="heart">💖</div>
+        <h1 class="title">Happy Birthday, Ayontika!</h1>
+        <p class="message">
+            Wishing you a day filled with laughter, love, and all the little things that make you smile.  
+            You light up my life in more ways than I can ever express. Here's to you, my sunshine! 🌟
+        </p>
     </div>
-    <div class="border-decor"></div>
+
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
 </body>
 </html>
