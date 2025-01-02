@@ -6,22 +6,24 @@
     <title>Happy Birthday Ayontika</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        
         body {
             margin: 0;
             height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
             background: linear-gradient(120deg, #3a1c71, #d76d77, #ffaf7b);
             font-family: 'Pacifico', cursive;
-            overflow: hidden;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .birthday-container {
-            text-align: center;
-            color: #ffffff;
-            animation: fadeIn 3s ease-in-out;
-            padding: 20px;
+            z-index: 2;
+            position: relative;
             max-width: 90%;
         }
 
@@ -33,8 +35,8 @@
 
         .title {
             font-size: 3rem;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
         }
 
         .message {
@@ -44,14 +46,52 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
+        /* Flying balloons */
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            animation: fly 10s infinite ease-in-out;
+        }
+
+        .balloon:nth-child(1) {
+            left: 10%;
+            animation-duration: 8s;
+            animation-delay: 0s;
+        }
+
+        .balloon:nth-child(2) {
+            left: 30%;
+            animation-duration: 9s;
+            animation-delay: 2s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 50%;
+            animation-duration: 7s;
+            animation-delay: 4s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 70%;
+            animation-duration: 8s;
+            animation-delay: 1s;
+        }
+
+        .balloon:nth-child(5) {
+            left: 90%;
+            animation-duration: 10s;
+            animation-delay: 3s;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translateY(0) scale(1);
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            50% {
+                transform: translateY(-70vh) scale(1.1);
+            }
+            100% {
+                transform: translateY(-100vh) scale(1);
             }
         }
 
@@ -80,17 +120,23 @@
     </style>
 </head>
 <body>
+    <!-- Balloons -->
+    <div class="balloon" style="width: 60px; height: 80px; background-color: #ff4f5e; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+    <div class="balloon" style="width: 50px; height: 70px; background-color: #ffd700; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+    <div class="balloon" style="width: 55px; height: 75px; background-color: #4caf50; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+    <div class="balloon" style="width: 65px; height: 85px; background-color: #1e90ff; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+    <div class="balloon" style="width: 60px; height: 80px; background-color: #ff69b4; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
+
+    <!-- Birthday Message -->
     <div class="birthday-container">
         <div class="heart">💖</div>
         <h1 class="title">Happy Birthday, Ayontika!</h1>
         <p class="message">
             Today is a celebration of you—the amazing, kind, and beautiful person who lights up my life. 
             I am so lucky to have you as my girlfriend, and every day with you feels like a gift.
-            <br><br>
-            I hope this birthday brings you as much happiness as you bring to me. 
+            I hope this birthday brings you as much happiness as you get to me. 
             Let this day remind you of how loved and cherished you are. 
-            Here's to many more birthdays together, filled with laughter, joy, and unforgettable moments. 
-            <br><br>
+            Here's to many more birthdays, filled with laughter, joy, and unforgettable moments. 
             Happy Birthday, my love! ❤️🎉 You make my world brighter just by being in it.
         </p>
     </div>
